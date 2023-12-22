@@ -16,7 +16,7 @@ users.get("/users", cacheMiddleware, async (req, res) => {
             .skip((page - 1) * pageSize)
             .sort({ createdAt: -1 })
 
-        const totalUsers = await usersModel.count()
+        const totalUsers = await usersModel.countDocuments()
 
         res.status(200).send({
             message: "Utenti caricati correttamente.",
