@@ -22,7 +22,7 @@ server.use("/", loginRoute)
 
 mongoose.connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
-    unseUnifiedTopology: true
+    useUnifiedTopology: true
 })
 
 
