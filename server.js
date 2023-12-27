@@ -1,6 +1,5 @@
 import express from "express";
 import mongoose from "mongoose";
-import livereload from "livereload"
 import cors from "cors";
 import dotenv from "dotenv";
 
@@ -11,7 +10,6 @@ const server = express()
 
 server.use(express.json())
 server.use(cors())
-server.use
 
 import usersRoute from "./Routes/users.js";
 import productsRoute from "./Routes/products.js"
@@ -22,7 +20,10 @@ server.use("/", productsRoute)
 server.use("/", loginRoute)
 
 
-mongoose.connect(process.env.MONGODB_URL)
+mongoose.connect(process.env.MONGODB_URL, {
+    useNewUrlParser: true,
+    unseUnifiedTopology: true
+})
 
 
 const db = mongoose.connection
