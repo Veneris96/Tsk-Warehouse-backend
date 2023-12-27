@@ -20,10 +20,7 @@ server.use("/", productsRoute)
 server.use("/", loginRoute)
 
 
-mongoose.connect(process.env.MONGODB_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
+mongoose.connect(process.env.MONGODB_URL)
 
 
 const db = mongoose.connection
