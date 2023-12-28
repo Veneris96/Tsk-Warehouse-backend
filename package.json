@@ -10,8 +10,7 @@
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js",
-    "serve": "netlify-lambda serve src",
-    "build": "netlify-lambda build src"
+    "build": "build server.js"
   },
   "keywords": [],
   "author": "Matteo Devicienti",
