@@ -9,7 +9,9 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "serve": "netlify-lambda serve src",
+    "build": "netlify-lambda build src"
   },
   "keywords": [],
   "author": "Matteo Devicienti",
@@ -22,7 +24,11 @@
     "express-validator": "^7.0.1",
     "jsonwebtoken": "^9.0.2",
     "livereload": "^0.9.3",
-    "mongoose": "^8.0.3"
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.0.3",
+    "netlify-cli": "^17.10.1",
+    "netlify-lambda": "^2.0.16",
+    "serverless-http": "^3.2.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.2"
