@@ -30,3 +30,5 @@ db.once("open", () => {
 })
 
 server.listen(PORT, () => console.log(`Server avviato sulla porta ${PORT}.`))
+
+export default server
