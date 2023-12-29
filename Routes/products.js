@@ -64,7 +64,7 @@ products.get("/products/:id", cacheMiddleware, async (req, res) => {
     }
 })
 
-products.post("/products/new", async (req, res) => {
+products.post("/products", async (req, res) => {
     const errors = validationResult(req)
 
     if (!errors.isEmpty()) {
