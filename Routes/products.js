@@ -6,7 +6,7 @@ import cacheMiddleware from "../Middlewares/cacheMiddleware.js"
 const products = express.Router()
 
 products.get("/products", cacheMiddleware, async (req, res) => {
-    const { page = 1, pageSize = 100 } = req.query
+    const { page = 1, pageSize = 100000 } = req.query
     try {
         const products = await ProductsModel.find()
             .populate("titolo", "editore categoria sottocategoria quantità prezzo_acquisto prezzo_vendita ISBN id")
